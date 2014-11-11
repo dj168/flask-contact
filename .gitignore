@@ -1,4 +1,10 @@
 *.log
 *.pot
 *.pyc
+*DS_Store
+*.Python
+bin
+lib
+include
+share
 local_settings.py

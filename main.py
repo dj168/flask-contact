@@ -1,10 +1,13 @@
 #!/usr/bin/python
 from flask import Flask, request, render_template
-from flask.ext.wtf import Form, TextField, html5, Required
+from flask.ext.wtf import Form, html5
+from wtforms import TextField
+from wtforms.validators import Required
 from optparse import OptionParser
 from email.mime.text import MIMEText
 import smtplib
 import settings
+
 
 parser = OptionParser()
 parser.add_option("-p", "--port", dest="port", default=5000, 
@@ -12,7 +15,7 @@ parser.add_option("-p", "--port", dest="port", default=5000,
 parser.add_option("-l", "--listen", dest="listen", default="127.0.0.1", 
     help="Address to listen on", type="string")
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static')
 app.secret_key = settings.SECRET_KEY
 
 class ContactForm(Form):
