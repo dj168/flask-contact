@@ -1,3 +1,7 @@
 body {
   padding-top: 50px;
 }
+
+.error {
+    color: #FF0000;
+}
