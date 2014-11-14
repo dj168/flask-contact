@@ -47,6 +47,12 @@ def index():
   form = ContactForm()
   return render_template('index.html', settings=settings, form=form)
 
+@app.route('/cats')
+def gif_cats():
+  gif_path = 'static/gifs'
+  gifs = os.listdir(gif_path)
+  return render_template('cats.html', gif_path=gif_path, gifs=gifs)
+
 if __name__ == "__main__":
     (options, args) = parser.parse_args()
     app.debug = True

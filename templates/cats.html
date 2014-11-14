@@ -1,0 +1,20 @@
+{% include 'base.html' %}
+
+<div class="container">
+
+	<div class="text-center">
+		<h1>OMFG CATS</h1>
+	</div>
+
+	{% for gif in gifs %}
+	<div width="100%">
+		<img style="margin:auto; display:block; margin-bottom:10px" src="/{{ gif_path }}/{{ gif }}">
+	</div>
+	{% endfor %}
+
+</div><!-- /.container -->
+	<!-- script references -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="static/js/bootstrap.min.js"></script>
+	</body>
+</html>
