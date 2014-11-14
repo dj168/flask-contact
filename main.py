@@ -7,6 +7,7 @@ from optparse import OptionParser
 from email.mime.text import MIMEText
 import smtplib
 import settings
+import os
 
 
 parser = OptionParser()
